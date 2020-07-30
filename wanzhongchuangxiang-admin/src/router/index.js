@@ -34,7 +34,7 @@ export const constantRoutes = [
   {
     path: '/login',
     component: () => import('@/views/login/index'),
-    hidden: true
+    // hidden: true
   },
 
   {
@@ -61,19 +61,19 @@ export const constantRoutes = [
   },
 
   {
-    path: '/example',
+    path: '/users',
     component: Layout,
-    redirect: '/example/table',
-    name: 'Example',
+    redirect: '/users/table',
+    name: 'users',
     meta: {
       title: '用户管理',
       icon: 'el-icon-s-custom'
     },
     children: [
       {
-        path: 'table',
-        name: 'Table',
-        component: () => import('@/views/table/index'),
+        path: 'position',
+        name: 'position',
+        component: () => import('@/views/position/index'),
         meta: {
           title: '职位管理',
           icon: 'table'
@@ -187,7 +187,7 @@ export const constantRoutes = [
     component: Layout,
     children: [
       {
-        path: 'https://panjiachen.github.io/vue-element-admin-site/#/',
+        path: '/pay',
         meta: {
           title: '结算管理',
           icon: 'el-icon-shopping-cart-1'
